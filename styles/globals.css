@@ -16,12 +16,46 @@
   }
 }
 
+/* Webkit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0; 
+  border-radius: 4px; /* Add rounded corners to the thumb */
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 transparent;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #3DB9BE;
+}
+
+.custom-background {
+  background: linear-gradient(to bottom, #3DB9BE 20%, white 10%);
+}
+
+
+.min-h-custom {
+  min-height: 86vh;
+}
+
+.min-h-subtitle {
+  min-height: 120px;;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.spacing-l {
+  letter-spacing: 0.3rem;
 }
