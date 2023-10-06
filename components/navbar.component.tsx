@@ -31,22 +31,7 @@ export default function Navbar({ openNavbar, isOpen }: Props) {
 
           <button className="uppercase hover:bg-black transition bg-l-purple text-sm rounded flex items-center gap-3 px-8 py-2">
             <span className="spacing-l">obtén aquí</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M5 12l14 0"></path>
-              <path d="M15 16l4 -4"></path>
-              <path d="M15 8l4 4"></path>
-            </svg>
+            <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
           </button>
         </div>
         <div
@@ -97,22 +82,7 @@ export default function Navbar({ openNavbar, isOpen }: Props) {
           </li>
           <button className="uppercase hover:bg-black transition bg-l-purple w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
             <span className="spacing-l">obtén aquí</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M5 12l14 0"></path>
-              <path d="M15 16l4 -4"></path>
-              <path d="M15 8l4 4"></path>
-            </svg>
+            <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
           </button>
         </ul>
       </div>

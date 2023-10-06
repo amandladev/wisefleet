@@ -19,7 +19,8 @@ const config: Config = {
         'transparency': 'rgba(255,255,255,0.1)',
         'hoverColor': '#008996',
         'l-purple': '#3A3A5F',
-        
+        'footerBg': '#f1f1f1',
+        'footerSecond': '#212a2f'
       }
     },
   },

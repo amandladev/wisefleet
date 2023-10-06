@@ -1,0 +1,26 @@
+[    
+    {
+        "id": 0,
+        "image": "/flota1.jpg",
+        "title" : "Activacion en minutos",
+        "description" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas másrtista."
+    },
+    {
+        "id": 1,
+        "image": "/flota2.jpg",
+        "title" : "Sin contratos",
+        "description" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, bajar el transportista."
+    },
+    {
+        "id": 2,
+        "image": "/flota3.jpg",
+        "title" : "Estadisticas de comportamiento",
+        "description" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, bajar el transportista."
+    },
+    {
+        "id": 3,
+        "image": "/flota4.jpg",
+        "title" : "No importa el tama;o de tu flota",
+        "description" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades,  los marabajar el transportista."
+    }
+]
