@@ -1,38 +1,61 @@
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface Props {
   openNavbar: () => void;
   isOpen: boolean;
+  mainPage?: boolean
 }
-export default function Navbar({ openNavbar, isOpen }: Props) {
+export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
   return (
-    <header className="sticky top-0 z-50">
-      <nav className="roboto bg-mainColor flex flex-row justify-between items-center px-4 py-4 md:px-24 relative z-20">
-        <Image width={93} height={40} src={"/logo.svg"} alt="Wisefleet logo" />
-
+    <header className="sticky top-0 z-30 bg-mainColor">
+      <motion.nav 
+      initial={{ opacity: 0, translateY: -100 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0, scale: 0.5 }}
+      className="bg-mainColor flex flex-row justify-between items-center px-4 py-4 md:px-24 relative z-20">
+        <Link href="/#start">
+          <Image width={93} height={40} src={"/logo.svg"} alt="Wisefleet logo" />
+        </Link>
         <div className="items-center gap-10 hidden md:flex">
           <ul className="flex gap-4 mr-10">
             <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-              Planes
+              <Link href="/#plans">
+                Planes
+              </Link>
             </li>
             <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-              Beneficios
+              <Link href="/#benefits">
+                Beneficios
+              </Link>
             </li>
             <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-              Contacto
+              <Link href="/#contact">
+                Contacto
+              </Link>
             </li>
             <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-              Descarga
+              <Link href="/#download">
+                Descarga
+              </Link> 
             </li>
             <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-              Preguntas frecuentes
+              <Link href="/#qna">
+                Preguntas frecuentes
+              </Link>
             </li>
           </ul>
-
-          <button className="uppercase hover:bg-black transition bg-l-purple text-sm rounded flex items-center gap-3 px-8 py-2">
-            <span className="spacing-l">obtén aquí</span>
-            <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
-          </button>
+          {
+            mainPage &&
+            <Link href="/products">
+              <button className="uppercase hover:bg-black transition bg-l-purple text-sm rounded flex items-center gap-3 px-8 py-2">
+                <span className="spacing-l">obtén aquí</span>
+                <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
+              </button>
+            </Link>
+          }
         </div>
         <div
           onClick={openNavbar}
@@ -58,7 +81,7 @@ export default function Navbar({ openNavbar, isOpen }: Props) {
             </svg>
           </span>
         </div>
-      </nav>
+      </motion.nav>
       <div
         className={`absolute w-full z-10 bg-mainColor py-6 md:hidden block ${
           isOpen ? "slide-top-back " : "nav-responsive-bottom slide-top"
@@ -66,24 +89,36 @@ export default function Navbar({ openNavbar, isOpen }: Props) {
       >
         <ul className="flex flex-col gap-4 items-center justify-center">
           <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-            Planes
+            <Link href="/#plans">
+              Planes
+            </Link>
           </li>
           <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-            Beneficios
+            <Link href="/#benefits">
+              Beneficios
+            </Link>
           </li>
           <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-            Contacto
+            <Link href="/#contact">
+              Contacto
+            </Link>
           </li>
           <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-            Descarga
+            <Link href="/#download">
+              Descarga
+            </Link>
           </li>
           <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
-            Preguntas frecuentes
+            <Link href="/#qna">
+              Preguntas frecuentes
+            </Link>
           </li>
-          <button className="uppercase hover:bg-black transition bg-l-purple w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
-            <span className="spacing-l">obtén aquí</span>
-            <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
-          </button>
+          <Link href="/product">
+            <button className="uppercase hover:bg-black transition bg-l-purple w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
+              <span className="spacing-l">obtén aquí</span>
+              <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
+            </button>
+          </Link>
         </ul>
       </div>
       <style jsx>{`

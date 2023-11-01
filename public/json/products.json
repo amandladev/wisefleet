@@ -1,0 +1,39 @@
+[    
+    {
+        "id": 0,
+        "title" : "6 MESES",
+        "type": "PLAN",
+        "description" : "(Paga 5 y utiliza por 6 meses)",
+        "features" : [
+            "Dispositivo GPS",
+            "Aplicacion movil",
+            "Plataforma",
+            "Seguimiento moviles",
+            "Recorridos",
+            "Comportamiento de conduccion",
+            "Replicas"
+        ],
+        "options": [],
+        "image": "product1.jpg",
+        "name": "Wisecity Lite",
+        "price": 250.00
+    },
+    {
+        "id": 1,
+        "title" : "ANUAL",
+        "type": "PLAN",
+        "features" : [
+            "Dispositivo GPS",
+            "Aplicacion movil",
+            "Plataforma",
+            "Seguimiento moviles",
+            "Recorridos",
+            "Comportamiento de conduccion",
+            "Replicas"
+        ],
+        "options": [],
+        "image": "product2.jpg",
+        "name": "Wisecity Lite",
+        "price": 350.00
+    }
+]

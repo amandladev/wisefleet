@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import CarouselButton from "./carouselButton.component";
+import Button from "./button.component";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,7 +50,7 @@ export default function Carousel() {
   };
 
   return (
-    <section className="relative">
+    <>
       <article className="carousel overflow-hidden relative">
         <div className="carousel-inner flex  transition-transform duration-300 bg-black">
           {slides.map((slide) => (
@@ -83,33 +84,15 @@ export default function Carousel() {
                   <span className="font-bold"> {slide.content2 ?? ""}</span>
                 </p>
 
-                <button className="uppercase hover:bg-mainColor hover:border-transparent transition bg-transparency border-white border-2 text-lg rounded-xl w-80 flex items-center justify-center gap-3 px-8 py-2">
-                  <span className="spacing-l">obtén aquí</span>
-                </button>
+                <Button isDefault={false} />
               </div>
             </motion.div>
           ))}
         </div>
       </article>
 
-      <button
-        onClick={prevSlide}
-        className="carousel-prev border-solid border-2 border-white absolute 
-        left-3 md:left-20 bottom-72 md:bottom-1/2 transform -translate-y-1/2 transition 
-        hover:bg-mainTransparency hover:border-transparent bg-gray-500 text-white 
-        md:p-2 p-1 ml-0 md:ml-3 rounded-full"
-      >
-        <Image width={30} height={30} alt="prev slide" src={"/flecha3.svg"} />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="carousel-next border-solid border-2 border-white absolute 
-        right-3 md:right-20 bottom-72 md:bottom-1/2  transform -translate-y-1/2 transition 
-        hover:bg-mainTransparency hover:border-transparent bg-gray-500 text-white 
-        md:p-2 p-1 mr-0 md:mr-3 rounded-full"
-      >
-        <Image width={30} height={30} alt="prev slide" src={"/arrow.svg"} />
-      </button>
-    </section>
+      <CarouselButton slideManager={prevSlide} direction="left" image="/arrow2.svg" size={30}/>
+      <CarouselButton slideManager={nextSlide} direction="right" image="/arrow.svg" size={30}/>
+    </>
   );
 }
