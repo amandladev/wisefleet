@@ -232,13 +232,13 @@ export default function Home() {
           id="download"
         >
           <div className="flex flex-col gap-4  justify-self-end md:-mt-20">
-            <h1 className="text-mainColor text-5xl md:text-7xl font-bold">
+            <h1 className="text-center md:text-left text-mainColor text-5xl md:text-7xl font-bold">
               Descarga la APP
             </h1>
-            <h4 className="text-black font-bold text-xl md:text-2xl">
+            <h4 className="text-center md:text-left text-black font-bold text-xl md:text-2xl">
               Y comienza a mejorar la gestión de tu flota
             </h4>
-            <p className="text-gray-600  max-w-md leading-loose">
+            <p className="px-3 md:px-0 text-gray-600  max-w-md leading-loose">
               La revolucionaria aplicación que te ayudará a visualizar tu flota
               por patente en tiempo real y estadísticas de comportamiento por
               móvil, y en conjunto con la plataforma,
