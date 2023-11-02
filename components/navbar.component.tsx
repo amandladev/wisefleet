@@ -114,7 +114,7 @@ export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
             </Link>
           </li>
           <Link href="/product">
-            <button className="uppercase hover:bg-black transition bg-l-purple w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
+            <button className="uppercase hover:bg-black transition bg-l-purple w-full md:w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
               <span className="spacing-l">obtén aquí</span>
               <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
             </button>

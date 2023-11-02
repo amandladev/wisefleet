@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CarouselButton from "./carouselButton.component";
 import Button from "./button.component";
+import Link from "next/link";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -83,8 +84,9 @@ export default function Carousel() {
                   {slide.content}
                   <span className="font-bold"> {slide.content2 ?? ""}</span>
                 </p>
-
-                <Button isDefault={false} />
+                <Link href={'/products'}>
+                  <Button isDefault={false} />
+                </Link>
               </div>
             </motion.div>
           ))}

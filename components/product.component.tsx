@@ -3,12 +3,15 @@ import { useState } from "react";
 import { ProductType } from "@/types/product.type";
 import CarouselButton from "./carouselButton.component";
 import Button from "./button.component";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface Props {
   products: ProductType[];
 }
 
 export default function Products({ products }: Props) {
+  const router = useRouter()
   const [current, setCurrent] = useState(0);
   const next = () => {
     setCurrent((prevSlide) =>
@@ -20,6 +23,13 @@ export default function Products({ products }: Props) {
     setCurrent((prevSlide) =>
       prevSlide === 0 ? products.length - 1 : prevSlide - 1
     );
+  };
+
+  const openCheckout = (product: ProductType) => {
+    router.push({
+        pathname: `/checkout/${product.id}`,
+        query: { product: JSON.stringify(product) },
+      });
   };
 
   return (
@@ -73,7 +83,9 @@ export default function Products({ products }: Props) {
                         );
                     })}
                     </div>
-                    <Button isDefault={true} isProduct={true}/>
+                    <div onClick={() => openCheckout(product)}>
+                      <Button isDefault={true} isProduct={true} />
+                    </div>
                 </article>
             </div>
         );

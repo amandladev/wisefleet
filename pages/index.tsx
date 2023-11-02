@@ -15,6 +15,7 @@ import { CardType } from "@/types/card.type";
 import { ProductType } from "@/types/product.type";
 import Footer from "@/components/footer.component";
 import { fetchData } from "@/utils/fetch.util";
+import Link from "next/link";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -90,8 +91,9 @@ export default function Home() {
               </span>{" "}
               apta para cualquier telefono.
             </p>
-
-            <Button isDefault={true} />
+            <Link href={'/products'}>
+              <Button isDefault={true} />
+            </Link>
           </div>
         </section>
 
@@ -130,7 +132,9 @@ export default function Home() {
           <CardContent cards={contentCards} />
 
           <div className="w-full justify-center flex mt-0 md:mt-40 relative z-20 px-8 md:px-0">
-            <Button isDefault={true} />
+            <Link href={'/products'}>
+              <Button isDefault={true} />
+            </Link>
           </div>
         </section>
 
@@ -218,8 +222,9 @@ export default function Home() {
             </div>
           </div>
           <div></div>
-
-          <Button isDefault={false} />
+          <Link href={"/products"}>
+            <Button isDefault={false} />
+          </Link>
         </section>
 
         <section

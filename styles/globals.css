@@ -132,3 +132,11 @@ body {
 .custom-max {
   max-width: 500px;
 }
+
+.custom-filter-color {
+  /* green 
+  filter: invert(99%) sepia(62%) saturate(1863%) hue-rotate(23deg)
+            brightness(100%) contrast(101%); */
+            filter: invert(32%) sepia(55%) saturate(1843%) hue-rotate(155deg) brightness(101%) contrast(101%);
+}
+

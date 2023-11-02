@@ -38,7 +38,7 @@ export default function Question({question, answer} : Props) {
           />
         )}
         <h4
-          className={`font-bold text-xl  ${
+          className={`font-bold text-lg md:text-xl ${
             active ? "text-mainColor" : "text-gray-600"
           }`}
           
@@ -57,7 +57,7 @@ export default function Question({question, answer} : Props) {
             alt="plus"
             className="opacity-0"
           />
-          <p className="text-black">
+          <p className="text-black text-sm md:text-lg">
             <br />
             {answer}
           </p>

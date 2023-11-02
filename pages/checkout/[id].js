@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 
 import Navbar from "@/components/navbar.component";
 import Form from "@/components/form.component";
-import { handleState } from "@/utils/handleStages.util";
 import { alerts } from "@/components/alert.component";
+import { handleState } from "@/utils/handleStages.util";
 
 
 export default function Checkout() {
@@ -80,7 +80,7 @@ export default function Checkout() {
         body.city = client.address.city
         await axios.post('/api/database/createOrder', body)
         await sendDataToEnviame(dataFromDataBase.code)
-        
+        await sendEmail()
         // const id = data.id
         // const json = JSON.stringify(data)
         // \?data=${json}
@@ -190,6 +190,10 @@ export default function Checkout() {
     if (client) setClient(client)
     // if (deliveryPrice) setDeliveryPrice(deliveryPrice)
     setPaymentModal(current => !current)
+  }
+
+  const sendEmail = async () => {
+    await axios.post('/api/email/send') 
   }
 
   useEffect(() => {

@@ -43,13 +43,13 @@ export default function Products() {
         {products.length > 0 &&
           products.map((product, index) => {
             return (
-              <section key={index} className="px-24 py-10">
+              <section key={index} className="px-2 md:px-24 py-0 md:py-10">
                 <motion.div 
                  initial={{ opacity: 0 }}
                  animate={{ opacity: 1, scale: 0.9 }}
                  transition={{ duration: 0.5 }}
                  exit={{ opacity: 0, scale: 0.5 }}
-                className="flex gap-20 justify-center">
+                className="flex gap-20 justify-center flex-col md:flex-row">
                   <Image
                     src={`/products/${product.image}`}
                     height={900}
@@ -78,7 +78,7 @@ export default function Products() {
                         onClick={() => openCheckout(product)}
                         className="w-full bg-black text-white py-3 transition hover:-translate-y-1"
                       >
-                        Pagar
+                        Comprar
                       </button>
                     {/* </Link> */}
 
