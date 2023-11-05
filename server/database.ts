@@ -16,7 +16,6 @@ const connection = await mysql.createConnection(config)
 export class WisefleetModel {
     static async getAll () {
         const [orders] = await connection.query('SELECT * FROM test')
-        console.log(orders)
         return orders
     }
 

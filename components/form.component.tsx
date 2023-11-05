@@ -2,6 +2,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Departments, shipmentTypeArr } from "@/utils/constants.util";
+// import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import {
   handleNumberInput,
   handleState,
@@ -72,7 +74,8 @@ export default function Form({ openPayment, product }: Props) {
   const departmentHasContent = department.length > 0;
 
   return (
-    <main className="flex relative flex-col-reverse md:flex-row">
+    <Fade cascade damping={0.1}>
+        <main className="flex relative flex-col-reverse md:flex-row">
       <form
         className="text-black py-6 px-8 md:px-20 xl:px-40 md:w-1/2 w-full border-r border-t border-gray-200"
         id="payment-form"
@@ -395,5 +398,7 @@ export default function Form({ openPayment, product }: Props) {
         )}
       </aside>
     </main>
+      </Fade>
+    
   );
 }

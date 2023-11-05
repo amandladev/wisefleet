@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 export default function Contact() {
   const saveContact = () => {
@@ -7,6 +8,7 @@ export default function Contact() {
   }
 
   return (
+    <Fade cascade damping={0.1}>
       <div className="flex flex-col items-center xl:flex-row gap-10 min-h-custom2 px-3 py-20 md:py-3 md:px-24  md:mb-1">
         <motion.div 
         initial={{ opacity: 0 }}
@@ -71,6 +73,6 @@ export default function Contact() {
           </form>
         </motion.aside>
       </div>
-    
+    </Fade>
   );
 }
