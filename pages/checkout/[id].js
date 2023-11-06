@@ -11,7 +11,6 @@ import Form from "@/components/form.component";
 import { alerts } from "@/components/alert.component";
 import { handleState } from "@/utils/handleStages.util";
 
-
 export default function Checkout() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +19,7 @@ export default function Checkout() {
   const [client, setClient] = useState({})
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
+  const [deliveryPrice, setDeliveryPrice] = useState(null);
   const [cardHolder, setCardHolder] = useState(null);
   const [handelCard, setHandelCard] = useState(true);
   const [cvv, setCvv] = useState("");
@@ -33,11 +33,11 @@ export default function Checkout() {
   const { product: productQuery } = router.query;
 
   const onError = (err) => {
+    console.error(err)
     setLoading(false);
     alerts.fire({
       icon: 'error',
       title: 'Hubo un error',
-      // timer: 2000,
       text: 'Parece que los datos ingresados no son válidos',
       confirmButtonText: 'Cerrar'
     })
@@ -53,7 +53,7 @@ export default function Checkout() {
   const onSuccess = async ({data, status}) => {
     const { id, card } = data
     const { name, lastname, phone, email } = client
-    const { data : dataFromDataBase} = await axios.get('/api/database/getLastCode')
+    const { data : dataFromDataBase} = await axios.get('/api/order/getLastCode')
 
     const body = {
       "source_id": id,
@@ -78,9 +78,16 @@ export default function Checkout() {
         console.log({response})
         body.address = client.address.line1
         body.city = client.address.city
-        await axios.post('/api/database/createOrder', body)
+        await axios.post('/api/order/createOrder', body)
         await sendDataToEnviame(dataFromDataBase.code)
-        await sendEmail()
+        const dataForEmail = {
+          product,
+          deliveryPrice,
+          client,
+          orderId: dataFromDataBase.code
+        }
+        await axios.post('/api/email/send', dataForEmail) 
+        // await sendEmail(body)
         // const id = data.id
         // const json = JSON.stringify(data)
         // \?data=${json}
@@ -188,12 +195,8 @@ export default function Checkout() {
 
   const openPayment = (client = null, deliveryPrice= null) => {
     if (client) setClient(client)
-    // if (deliveryPrice) setDeliveryPrice(deliveryPrice)
+    if (deliveryPrice) setDeliveryPrice(deliveryPrice)
     setPaymentModal(current => !current)
-  }
-
-  const sendEmail = async () => {
-    await axios.post('/api/email/send') 
   }
 
   useEffect(() => {
@@ -384,8 +387,6 @@ export default function Checkout() {
               <footer className="mt-6 p-4">
                 <button onClick={sendPayToOpenPay} className={`${loading && 'pointer-events-none'} submit-button px-4 py-3 rounded bg-mainColor text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors`}>
                   {loading ? 
-                  // <>
-                  // </>
                   'Cargando ...'  
                   : 'Pagar'}
                 </button>

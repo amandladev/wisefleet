@@ -29,10 +29,10 @@ export default function Success () {
                 transition={{ duration: 0.5 }}
                 exit={{ opacity: 0, scale: 0.5 }}
                 className="rounded-lg fixed light-background top-1/2 -translate-y-1/2 right-0 left-0 m-auto w-full lg:w-2/5 h-full lg:h-4/5">
-                    <div className="flex flex-col py-10 items-center gap-10">
-                        <h1 className="text-4xl text-mainColor font-extrabold ">Tú compra ha sido procesada!</h1>
+                    <div className="flex flex-col py-10 items-center gap-10 px-16 md:px-0">
+                        <h1 className="text-3xl md:text-4xl text-mainColor font-extrabold ">Tú compra ha sido procesada!</h1>
                         
-                        <div className="payment-ok custom-filter-color">
+                        <div className="payment-ok custom-filter-color  ">
                             <Image src={'/ok.svg'} width={400} height={400} alt="success" />
                         </div>
 

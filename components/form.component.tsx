@@ -57,7 +57,7 @@ export default function Form({ openPayment, product }: Props) {
       email,
       lastname,
       name,
-      phone
+      phone,
     };
 
     openPayment(client, deliveryPrice);
