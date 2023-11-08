@@ -47,13 +47,13 @@ export default function Home() {
           <Carousel />
         </section>
 
-        <section className="flex flex-col md:flex-row gap-3 custom-max-h h-screen pt-3 mb-12 md:mb-0 px-3 md:px-24 custom-background">
+        <section className="flex flex-col md:flex-row gap-3 custom-max-h h-full md:h-screen pt-3 mb-0 px-3 md:px-24 custom-background">
           <Fade cascade damping={0.1}>
             <div className="flex-1 order-2 md:order-1 md:px-3 px-8">
               <Image
-                width={900}
-                height={680}
-                src={"/img-descubre.png"}
+                width={850}
+                height={800}
+                src={"/app/img-descubre.png"}
                 alt="wisefleet"
               />
             </div>
@@ -79,13 +79,13 @@ export default function Home() {
               />
             </div>
 
-            <p className="text-gray-600 text-2xl max-custom-width mt-0 md:mt-16">
+            <p className="text-gray-100 text-xl md:text-2xl max-custom-width mt-0 md:mt-16">
               Revolucionaria solución sin contrato paras las empresas de
               transporte que requieren cumplir con la información que les
               solicitan los mandantes y al mismo tiempo controlar de manera
               simple sus vehículos.
             </p>
-            <p className="text-gray-600 text-2xl mt-8 max-custom-width">
+            <p className="text-gray-100 text-xl md:text-2xl mt-8 max-custom-width">
               Consta de un{" "}
               <strong className="font-bold text-hoverColor">
                 dispositivo autoinstalable, plataforma y una aplicación
@@ -120,30 +120,28 @@ export default function Home() {
           id="benefits"
         >
           <Fade cascade damping={0.1}>
-            <div className="w-100 flex justify-center my-10">
-              <div className="md:w-5/12 w-full px-3">
-                <h1 className="font-bold roboto text-6xl 2xl:text-6xl text-center translate-x-0 md:-translate-x-6 md:text-left text-mainColor">
+            <header className="w-full flex justify-center my-0 md:my-10">
+              <div className="md:w-5/12 w-full px-3 pb-5">
+                <h1 className="font-bold roboto text-4xl 2xl:text-6xl text-center translate-x-0 md:-translate-x-6 md:text-left text-mainColor">
                   Una flota más segura
                 </h1>
-                <h2 className="roboto text-4xl 2xl:text-5xl text-black text-center translate-x-0 md:translate-x-6 md:text-right mt-3 font-light">
+                <h2 className="roboto text-2xl 2xl:text-5xl text-black text-center translate-x-0 md:translate-x-6 md:text-right mt-0 md:mt-3 font-light">
                   Beneficios para transportistas
                 </h2>
               </div>
-            </div>
+            </header>
           </Fade>
           <Fade cascade damping={0.1}>
             <CardContent cards={contentCards} />
           </Fade>
-          <div className="w-full justify-center flex mt-0 md:mt-40 relative z-20 px-8 md:px-0">
+          <div className="w-full justify-center flex mt-6 md:mt-40 relative z-20 px-8 md:px-0">
             <Link href={"/products"}>
               <Button isDefault={true} />
             </Link>
           </div>
         </section>
 
-        <section className="relative" id="contact">
-          <Contact />
-        </section>
+        <Contact />
 
         <section className="min-h-custom image2-background py-20 md:py-3 px-3 md:px-24 gap-10 flex flex-col items-center justify-center relative">
           <Fade>
@@ -234,7 +232,7 @@ export default function Home() {
         </section>
 
         <section
-          className="h-screen custom-max-h  bg-white py-8 px-3 md:px-24 mt-4 md:mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
+          className="h-screen custom-max-h  bg-white py-8 px-3 md:px-24 mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
           id="download"
         >
           <Fade>
@@ -262,7 +260,7 @@ export default function Home() {
                   target={"_blank"}
                 >
                   <Image
-                    src={"/app-store.svg"}
+                    src={"/app/app-store.svg"}
                     width={200}
                     height={120}
                     alt="App store - Wisefleet"
@@ -275,7 +273,7 @@ export default function Home() {
                   target={"_blank"}
                 >
                   <Image
-                    src={"/play-store.svg"}
+                    src={"/app/play-store.svg"}
                     width={200}
                     height={120}
                     alt="Play store- Wisefleet"
@@ -287,7 +285,7 @@ export default function Home() {
           <Fade>
             <div className="md:-ml-24">
               <Image
-                src={"/app-3.png"}
+                src={"/app/app-3.png"}
                 width={900}
                 height={800}
                 alt="mobile app"
@@ -296,7 +294,7 @@ export default function Home() {
           </Fade>
         </section>
 
-        <section className="bg-white py-20 px-3 md:px-24 mt-4 md:mt-0 pb-40" id="qna">
+        <section className="bg-white py-20 px-3 md:px-24 mt-0 pb-40" id="qna">
           <Fade>
             <div className="text-center">
               <h2 className="text-5xl md:text-7xl font-light text-black md:mr-20">

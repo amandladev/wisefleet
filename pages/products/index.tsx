@@ -13,6 +13,7 @@ import { ProductType } from "@/types/product.type";
 export default function Products() {
   const router = useRouter();
   const [products, setProducts] = useState<ProductType[]>([]);
+  const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => {
     setIsOpen((current) => !current);
@@ -27,20 +28,27 @@ export default function Products() {
 
   useEffect(() => {
     fetchData("/json/products.json", setProducts);
+    setLoading(false);
   }, []);
 
   return (
     <>
       <Head>
-        <title>Wisefleet - Comprar</title>
+        <title>Wisefleet - Productos</title>
         <meta name="description" content="Soluciones para transportistas" />
         <link rel="icon" href="/logo.svg" />
       </Head>
 
       <Navbar openNavbar={toggleNavbar} isOpen={isOpen} mainPage={false} />
-
+      {
+        loading && <div className="h-screen w-screen bg-black absolute z-50">
+              <h1 className="text-white">CARGANDO ...
+              </h1>
+            </div>
+        }
       <main className="relative bg-white">
-        {products.length > 0 &&
+        
+        {!loading && products.length > 0 &&
           products.map((product, index) => {
             return (
               <section key={index} className="px-2 md:px-24 py-0 md:py-10">

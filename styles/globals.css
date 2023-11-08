@@ -61,7 +61,8 @@ body {
 
 .custom-background {
   /* background: linear-gradient(to bottom, white 20%, #3DB9BE 10%); */
-  background: linear-gradient(to bottom, #3DB9BE 30%, white 10%);
+  /* background: linear-gradient(to bottom, #3DB9BE 30%, white 10%); */
+  /* background: #3DB9BE; */
 }
 
 .image-background {
@@ -98,7 +99,11 @@ body {
 
 .min-h-custom2 {
   height: 90vh;
-  max-height: 1024px;
+  max-height: 1080px;
+}
+
+.min-h-custom3 {
+  min-height: 1200px;
 }
 
 .min-h-subtitle {
@@ -106,7 +111,7 @@ body {
 }
 
 .custom-max-h {
-  max-height: 1024px;
+  max-height: 1080px;
 }
 
 .max-custom-width {
