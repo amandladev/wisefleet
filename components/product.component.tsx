@@ -42,13 +42,13 @@ export default function Products({ products }: Props) {
                     product.id === current ? "" : "hidden"
                     }`}
                 >
-                    <div className="text-center">
-                        <div className="font-light text-xl">
+                    <header className="text-center">
+                        <span className="font-light text-xl">
                             {product.type} 
-                        </div>
+                        </span>
                         <h2 className="text-4xl">{product.title}</h2>
-                        <h4 className="text-sm h-6">{product.description ?? ""}</h4>
-                    </div>
+                        <small className="text-sm h-6">{product.description ?? ""}</small>
+                    </header>
                     <div>
                     {product.features.map((feature, index2) => {
                         return (
@@ -66,13 +66,13 @@ export default function Products({ products }: Props) {
                 </article>
 
                 <article className={`md:flex flex-col items-center rounded-lg hidden bg-mainColor p-12`}>
-                    <div className="text-center">
-                        <div className="font-light text-xl">
+                    <header className="text-center">
+                        <span className="font-light text-xl">
                             {product.type} 
-                        </div>
+                        </span>
                         <h2 className="text-4xl">{product.title}</h2>
-                        <h4 className="text-sm h-6">{product.description ?? ""}</h4>
-                    </div>
+                        <small className="text-sm h-6">{product.description ?? ""}</small>
+                    </header>
                     <div>
                     {product.features.map((feature, index2) => {
                         return (

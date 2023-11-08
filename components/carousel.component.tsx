@@ -12,29 +12,29 @@ export default function Carousel() {
       title: "Monitorea tus vehículos",
       content: "Con un plan que se adapta",
       content2: "al tamaño de su flota",
-      img: "banner1.jpg",
-      mobile_img: "banner1-mobile.jpg",
+      img: "banner/banner1.jpg",
+      mobile_img: "banner/banner1-mobile.jpg",
     },
     {
       id: 1,
-      title: "Monitorea tus vehículos",
-      content: "Contenido de la diapositiva 2",
-      img: "banner2.png",
-      mobile_img: "banner2-mobile.png",
+      title: "Tu Flota segura 24x7",
+      content: "El tamaño de tu flota no importa",
+      img: "banner/banner2.png",
+      mobile_img: "banner/banner2-mobile.png",
     },
     {
       id: 2,
-      title: "Monitorea tus vehículos",
-      content: "Contenido de la diapositiva 2",
-      img: "banner3.png",
-      mobile_img: "banner3-mobile.png",
+      title: "App para la gestión y control de tu flota",
+      content: "Cumple con los estándares de reportería logística que solicitan los mandantes",
+      img: "banner/banner3.png",
+      mobile_img: "banner/banner3-mobile.png",
     },
     {
       id: 3,
       title: "Monitorea tus vehículos",
-      content: "Contenido de la diapositiva 2",
-      img: "banner4.png",
-      mobile_img: "banner4-mobile.png",
+      content: "",
+      img: "banner/banner4.png",
+      mobile_img: "banner/banner4-mobile.png",
     },
   ];
 
@@ -82,7 +82,7 @@ export default function Carousel() {
 
                 <p className="w-1/2 md:w-full text-2xl md:text-5xl font-light text-center min-h-subtitle">
                   {slide.content}
-                  <span className="font-bold"> {slide.content2 ?? ""}</span>
+                  <strong className="font-bold"> {slide.content2 ?? ""}</strong>
                 </p>
                 <Link href={'/products'}>
                   <Button isDefault={false} />

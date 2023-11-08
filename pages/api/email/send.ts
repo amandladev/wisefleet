@@ -1,6 +1,7 @@
-import { EmailTemplate } from "@/components/EmailTemplate";
+import { EmailPaymentTemplate } from "@/components/emailPaymentTemplate.component";
 import { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from 'resend';
+import dayjs from 'dayjs';
 
 const resendKey = process.env.RESEND_API_KEY;
 const resend = new Resend(resendKey);
@@ -24,6 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         const productTotal = products.reduce((total, product) => total + product.subtotal, 0);
 
+        const now = dayjs();
+
+        const formattedDate = now.format('DD-MM-YYYY HH:mm:ss');
+
         const invoice = {
         subtotal: productTotal.toFixed(2),
         envio: deliveryPrice.toFixed(2),
@@ -39,17 +44,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         try {
             const data = await resend.emails.send({
-                from: 'onboarding@resend.dev',
-                to: customer.email,
+                from: 'Wisefleet <onboarding@resend.dev>',
+                to: [customer.email, 'info.peru@wisetrackcorp.com'],
                 subject: 'Compra Confirmada',
-                // html: ''
-                react: EmailTemplate({ 
+                react: EmailPaymentTemplate({ 
                     firstName: customer.name,
                     lastName: customer.lastName,
                     orderId,
                     delivery,
                     products,
-                    invoice
+                    invoice,
+                    date: formattedDate
                 }),
                 text: 'Compra Confirmada'
             })

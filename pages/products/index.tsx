@@ -60,13 +60,13 @@ export default function Products() {
                   <div className="text-black flex flex-col gap-3">
                     <div>
                       <p className="italic text-xs text-gray-600 text-right">{product.type}</p>
-                      <h1 className="text-5xl font-extrabold roboto">
+                      <h1 className="text-5xl font-extrabold roboto text-black">
                           <span className="text-2xl"></span> {product.title}
                       </h1>
                     </div> 
                     <p className="text-lg text-gray-600">Costo: <span className="text-black text-2xl font-extrabold">S/ {product.price}</span></p>
 
-                    <p className="font-light">
+                    <p className="font-light text-black">
                       Impuesto incluido. Los{" "}
                       <Link href={"/"} className="underline transition hover:text-gray-600">
                         gastos de envio
@@ -88,20 +88,18 @@ export default function Products() {
                       {
                         product.features.map((feature, indexFeature) => {
                             return (
-                                <li key={indexFeature}>{feature}</li>
+                                <li key={indexFeature} className="text-black">{feature}</li>
                             )
                         })
                       }
                     </ul>
 
                     <p className="font-light max-w-xl text-gray-500">
-                      Importante: Este Kit será instalado por un{" "}
-                      <span className="font-bold">
-                        Técnico Certificado Wisecity
+                    Importante: Este Kit es{" "}
+                      <span className="font-bold text-black">
+                      autoinstalable
                       </span>
-                      . Una vez realizada tu compra, te enviaremos un email para
-                      que selecciones el día y hora para coordinar la
-                      instalación.
+                      . Asimismo, en este plan el servicio estará activo por {product.id === 0 ? '6' : '12'} meses.
                     </p>
                   </div>
                 </motion.div>

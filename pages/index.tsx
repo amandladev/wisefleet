@@ -40,9 +40,9 @@ export default function Home() {
         <meta name="description" content="Soluciones para transportistas" />
         <link rel="icon" href="/logo.svg" />
       </Head>
-      <main className="relative" id="start">
-        <Navbar openNavbar={toggleNavbar} isOpen={isOpen} />
+      <Navbar openNavbar={toggleNavbar} isOpen={isOpen} />
 
+      <main className="relative" id="start">
         <section className="relative">
           <Carousel />
         </section>
@@ -66,7 +66,7 @@ export default function Home() {
                 height={100}
                 src={"/img-texto-descubre.png"}
                 alt="wiseflee gat"
-              />
+              />           
             </div>
           </div>
           <div className="order-last flex-1 px-6 md:px-0 pt-0 pb-10 md:pb-0 md:pt-10 mt-0 md:mt-8">
@@ -87,9 +87,9 @@ export default function Home() {
             </p>
             <p className="text-gray-600 text-2xl mt-8 max-custom-width">
               Consta de un{" "}
-              <span className="font-bold text-hoverColor">
+              <strong className="font-bold text-hoverColor">
                 dispositivo autoinstalable, plataforma y una aplicación
-              </span>{" "}
+              </strong>{" "}
               apta para cualquier telefono.
             </p>
             <Link href={"/products"}>
@@ -158,12 +158,12 @@ export default function Home() {
           </Fade>
 
           <Fade>
-            <div className="flex flex-wrap relative gap-3 md:gap-0">
-              <div className="relative flex-1 px-6">
-                <div className="flex items-center justify-center">
+            <section className="flex flex-wrap relative gap-3 md:gap-0">
+              <article className="relative flex-1 px-6">
+                <header className="flex items-center justify-center">
                   <h4 className="text-7xl md:text-9xl font-extrabold">99</h4>
                   <span className="text-3xl font-extrabold">%</span>
-                </div>
+                </header>
                 <p className="text-lg md:text-2xl max-w-xs text-center">
                   De nuestros clientes mantiene el servicio.
                 </p>
@@ -177,12 +177,12 @@ export default function Home() {
                     transform: "rotate(90deg)",
                   }}
                 />
-              </div>
-              <div className="relative flex-1 px-6">
-                <div className="flex items-center justify-center">
+              </article>
+              <article className="relative flex-1 px-6">
+                <header className="flex items-center justify-center">
                   <h4 className="text-7xl md:text-9xl font-extrabold">40</h4>
                   <span className="text-3xl font-extrabold">%</span>
-                </div>
+                </header>
                 <p className="text-lg md:text-2xl max-w-xs text-center">
                   Más económico respecto a la competencia.
                 </p>
@@ -196,12 +196,12 @@ export default function Home() {
                     transform: "rotate(90deg)",
                   }}
                 />
-              </div>
-              <div className="relative flex-1 px-6">
-                <div className="flex items-center justify-center">
+              </article>
+              <article className="relative flex-1 px-6">
+                <header className="flex items-center justify-center">
                   <h4 className="text-7xl md:text-9xl font-extrabold">100</h4>
                   <span className="text-3xl font-extrabold">+</span>
-                </div>
+                </header>
                 <p className="text-lg md:text-2xl max-w-xs text-center">
                   Réplicas para ingresar a diferentes mandantes.
                 </p>
@@ -215,19 +215,18 @@ export default function Home() {
                     transform: "rotate(90deg)",
                   }}
                 />
-              </div>
-              <div className="relative flex-1 px-6">
-                <div className="flex items-center justify-center">
+              </article>
+              <article className="relative flex-1 px-6">
+                <header className="flex items-center justify-center">
                   <h4 className="text-7xl md:text-9xl font-extrabold">99</h4>
                   <span className="text-3xl font-extrabold">%</span>
-                </div>
+                </header>
                 <p className="text-lg md:text-2xl max-w-xs text-center">
                   En ahorro de tiempo en la adquisición y funcionamiento del
                   servicio.
                 </p>
-              </div>
-            </div>
-            <div></div>
+              </article>
+            </section>
             <Link href={"/products"}>
               <Button isDefault={false} />
             </Link>
@@ -235,7 +234,7 @@ export default function Home() {
         </section>
 
         <section
-          className="min-h-screen py-8 px-3 md:px-24 mt-4 md:mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
+          className="min-h-screen bg-white py-8 px-3 md:px-24 mt-4 md:mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
           id="download"
         >
           <Fade>
@@ -250,10 +249,10 @@ export default function Home() {
                 La revolucionaria aplicación que te ayudará a visualizar tu
                 flota por patente en tiempo real y estadísticas de
                 comportamiento por móvil, y en conjunto con la plataforma,
-                <span className="text-mainColor font-bold">
+                <strong className="text-mainColor font-bold">
                   {" "}
                   podrás llevar tu gestión al siguiente nivel.
-                </span>
+                </strong>
               </p>
 
               <div className="flex relative z-10">
@@ -297,7 +296,7 @@ export default function Home() {
           </Fade>
         </section>
 
-        <section className="py-20 px-3 md:px-24 mt-4 md:mt-0 mb-40" id="qna">
+        <section className="bg-white py-20 px-3 md:px-24 mt-4 md:mt-0 pb-40" id="qna">
           <Fade>
             <div className="text-center">
               <h2 className="text-5xl md:text-7xl font-light text-black md:mr-20">
@@ -324,7 +323,6 @@ export default function Home() {
           </Fade>
         </section>
       </main>
-
       <Footer />
     </>
   );

@@ -8,13 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 /* Webkit (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
@@ -30,6 +30,15 @@
   border-radius: 4px; /* Add rounded corners to the thumb */
 }
 
+* {
+  color: #fff
+}
+
+main, footer, .main-navbar {
+  max-width: 1920px; /* Cambia el valor según tu preferencia */
+  margin: 0 auto; /* Centra el contenido en el centro de la página */
+}
+
 html {
   scrollbar-width: thin;
   scrollbar-color: #e0e0e0 transparent;
@@ -38,7 +47,7 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #fff;
+  background: #3DB9BE;
   font-family: "Roboto", sans-serif;
 }
 

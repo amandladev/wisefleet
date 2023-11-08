@@ -10,6 +10,8 @@ import Navbar from "@/components/navbar.component";
 import Form from "@/components/form.component";
 import { alerts } from "@/components/alert.component";
 import { handleState } from "@/utils/handleStages.util";
+import { validatePaymentData } from "@/utils/validation.utils";
+import { EnviameModel } from "@/services/enviame.service";
 
 export default function Checkout() {
   const router = useRouter();
@@ -25,8 +27,8 @@ export default function Checkout() {
   const [cvv, setCvv] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [loading, setLoading] = useState(false);
+  const [paymentModal, setPaymentModal] = useState(false);
 
-  const [paymentModal, setPaymentModal] = useState(false)
   const toggleNavbar = () => {
     setIsOpen((current) => !current);
   };
@@ -71,40 +73,36 @@ export default function Checkout() {
       }
     }
 
+    let response = null
     try {
-      const response = await axios.post('/api/openpay/createCharge', body)
-  
-      if (response && status === 200) {
-        console.log({response})
-        body.address = client.address.line1
-        body.city = client.address.city
-        await axios.post('/api/order/createOrder', body)
-        await sendDataToEnviame(dataFromDataBase.code)
-        const dataForEmail = {
-          product,
-          deliveryPrice,
-          client,
-          orderId: dataFromDataBase.code
-        }
-        await axios.post('/api/email/send', dataForEmail) 
-        // await sendEmail(body)
-        // const id = data.id
-        // const json = JSON.stringify(data)
-        // \?data=${json}
-        router.push(`/success`)
-      } else {
-        alerts.fire({
-          icon: 'error',
-          title: 'Hubo un error',
-          // timer: 2000,
-          text: 'No se pudo procesar su pago',
-          confirmButtonText: 'Cerrar'
-        }).then(() =>  
-          router.reload()
-        )
-      }
+      response = await axios.post('/api/openpay/createCharge', body)
     } catch (err) {
       console.error(err)
+      alerts.fire({
+        icon: 'error',
+        title: 'Hubo un error',
+        // timer: 2000,
+        text: 'No se pudo procesar su pago',
+        confirmButtonText: 'Cerrar'
+      }).then(() =>  
+        router.reload()
+      )
+    }
+    if (response && status === 200) {
+      body.address = client.address.line1
+      body.city = client.address.city
+      await axios.post('/api/order/createOrder', body)
+      await EnviameModel.sendData(client, product.price, dataFromDataBase.code.toString())
+      // await sendDataToEnviame(dataFromDataBase.code)
+      const dataForEmail = {
+        product,
+        deliveryPrice,
+        client,
+        orderId: dataFromDataBase.code
+      }
+      await axios.post('/api/email/send', dataForEmail) 
+      router.push(`/success`)
+    } else {
       alerts.fire({
         icon: 'error',
         title: 'Hubo un error',
@@ -119,14 +117,6 @@ export default function Checkout() {
 
   const sendPayToOpenPay = async () => {
     setLoading(true);
-    const { data } = await axios.get('/api/openpay/getCredentials');
-
-    OpenPay.setId(data.appId);
-    OpenPay.setApiKey(data.publicKey);
-
-    OpenPay.setSandboxMode(true);
-    OpenPay.getSandboxMode();
-
     const clientInfo = {
       card_number: cardNumber.replace(/\s/g, ''),
       holder_name: cardHolder,
@@ -143,54 +133,31 @@ export default function Checkout() {
         country_code: "PE",
       }
     }
+    const validData = validatePaymentData(clientInfo)
+
+    if (!validData) {
+      alerts.fire({
+        icon:'warning',
+        title: 'Error',
+        text: 'Completa todos los campos antes de continuar'
+      })
+      setLoading(false);
+      return 
+    }
  
+    const { data } = await axios.get('/api/openpay/getCredentials');
+
+    OpenPay.setId(data.appId);
+    OpenPay.setApiKey(data.publicKey);
+
+    OpenPay.setSandboxMode(true);
+    OpenPay.getSandboxMode();
+
     const deviceDataId  = OpenPay.deviceData.setup("payment-form");
     console.log({deviceDataId})
     setDeviceId(deviceDataId)
     
     OpenPay.token.create(clientInfo, onSuccess, onError); 
-  }
-
-  const sendDataToEnviame = async (orderId) => {
-    const body = {
-      "n_packages": 1,
-      "content_description": "Orden",
-      "imported_id": orderId.toString(),
-      "order_price": product.price,
-      "weight": "2",
-      "volumen": "2",
-      "type": "delivery",
-      "place": client.address.line3,
-      "shipping_origin": {
-        "warehouse_code": "2222"
-      },
-      "shipping_destination": {
-        "customer": {
-          "name": client.name + " " + client.lastname,
-          "email": client.email,
-          "phone": client.phone
-        }
-      },
-      "delivery_address": {
-        "place": client.address.line3,
-        "level1": client.address.city,
-        "full_address": client.address.line1,
-        "information": client.address.line2,
-        "pickup_point_code": ""
-      },
-      "carrier": {
-        // "carrier_code": "OLV",
-        "carrier_code": client.address.city === 'Lima' ? 'OLV' : 'OLV ',
-        "carrier_service": "normal"
-      }
-    }
-
-    try {
-      const { data } = await axios.post('/api/enviame/createShipment', body)
-      console.log({data})
-    } catch (error) {
-      console.error('DELIVERY ENVIAME FALLO @@@', error)
-    }
   }
 
   const openPayment = (client = null, deliveryPrice= null) => {
@@ -267,7 +234,7 @@ export default function Checkout() {
                     <Image src={'/images/card-visa-back.png'} alt="" height={400} width={400}/>
                     <div className="bg-transparent text-white text-xl w-full flex justify-end absolute bottom-20 px-8  sm:bottom-24 right-0 sm:px-12">
                       <div className="border border-white w-20 h-12 flex justify-center items-center">
-                        <p className="text-sm ml-3">{cvv.length > 0 ? cvv : 'Security code'}</p>
+                        <p className="text-sm ml-3">{cvv.length > 0 ? cvv : 'CVV'}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -374,7 +341,7 @@ export default function Checkout() {
                       <input
                         type="text"
                         className="block w-full col-span-2 px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:ring-mainColor focus:outline-none"
-                        placeholder="Security code"
+                        placeholder="CVV"
                         max-length="3"
                         onChange={(e) => handleState(setCvv, e.target.value)}
                         onFocus={() => setHandelCard(false)}
@@ -388,7 +355,7 @@ export default function Checkout() {
                 <button onClick={sendPayToOpenPay} className={`${loading && 'pointer-events-none'} submit-button px-4 py-3 rounded bg-mainColor text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors`}>
                   {loading ? 
                   'Cargando ...'  
-                  : 'Pagar'}
+                  : `Pagar S/ ${product.price + deliveryPrice}.00`}
                 </button>
               </footer>
             </div>

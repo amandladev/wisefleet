@@ -35,10 +35,10 @@ export const handleState = (setFun: any, val: any) => {
 }
 
 export const handleStringInput = (setFun: any, event: any) => {
-    const pattern = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜ\s]+$/;
+    const pattern = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜ@._,-\s]+$/;
 
     if (!pattern.test(event.target.value)) {
-      event.target.value = event.target.value.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ\s]/g, "");
+      event.target.value = event.target.value.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ@._,-\s]/g, "");
     }
 
     setFun(event.target.value)

@@ -28,17 +28,18 @@ export default function Success () {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 exit={{ opacity: 0, scale: 0.5 }}
-                className="rounded-lg fixed light-background top-1/2 -translate-y-1/2 right-0 left-0 m-auto w-full lg:w-2/5 h-full lg:h-4/5">
-                    <div className="flex flex-col py-10 items-center gap-10 px-16 md:px-0">
-                        <h1 className="text-3xl md:text-4xl text-mainColor font-extrabold ">Tú compra ha sido procesada!</h1>
+                className="rounded-lg fixed light-background top-1/2 -translate-y-1/2 right-0 left-0 m-auto w-full md:w-2/5 h-full md:h-4/5">
+                    <Image src={'/banner.png'} alt="banner" width={800} height={100} />
+                    <div className="flex flex-col py-10 items-center gap-10 px-16 lg:px-0">
+                        <h1 className="text-center text-3xl lg:text-4xl text-mainColor font-extrabold ">Tú compra esta siendo procesada!</h1>
                         
                         <div className="payment-ok custom-filter-color  ">
-                            <Image src={'/ok.svg'} width={400} height={400} alt="success" />
+                            <Image src={'/ok.svg'} width={300} height={300} alt="success" />
                         </div>
 
-                        <div className="text-xl text-mainColor">
-                            <p>En breve te llegara un correo con los detalles de tu compra.</p>
-                            <p className="text-center">Gracias por tu preferencia!</p>
+                        <div className="text-xl">
+                            <p className="text-center text-black">En breve te llegara un correo con los detalles de tu compra.</p>
+                            <p className="text-center text-black">Gracias por tu preferencia!</p>
                         </div>
                         <Link href={'/'}>
                             <div className="bg-transparent hover:bg-mainColor transition hover:text-white border-mainColor text-mainColor border-2 px-6 py-4 rounded-lg mt-3 text-xl">

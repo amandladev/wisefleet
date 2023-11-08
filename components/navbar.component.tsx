@@ -9,7 +9,7 @@ interface Props {
 }
 export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
   return (
-    <header className="sticky top-0 z-30 bg-mainColor">
+    <header className="sticky top-0 z-30 bg-mainColor main-navbar">
       <motion.nav 
       initial={{ opacity: 0, translateY: -100 }}
       animate={{ opacity: 1, translateY: 0 }}

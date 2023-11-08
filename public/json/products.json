@@ -3,7 +3,6 @@
         "id": 0,
         "title" : "SEMESTRAL",
         "type": "PLAN",
-        "description" : "(Paga 5 y utiliza por 6 meses)",
         "features" : [
             "Dispositivo GPS",
             "Aplicacion movil",
@@ -11,10 +10,10 @@
             "Seguimiento moviles",
             "Recorridos",
             "Comportamiento de conduccion",
-            "Replicas"
+            "Replicas (1 mandante a elegir)"
         ],
         "options": [],
-        "image": "product1.jpg",
+        "image": "product1.png",
         "name": "Wisecity Lite",
         "price": 250.00
     },
@@ -29,10 +28,10 @@
             "Seguimiento moviles",
             "Recorridos",
             "Comportamiento de conduccion",
-            "Replicas"
+            "Replicas (1 mandante a elegir)"
         ],
         "options": [],
-        "image": "product2.jpg",
+        "image": "product2.png",
         "name": "Wisecity Lite",
         "price": 350.00
     }
