@@ -4,9 +4,9 @@ export default function Footer () {
     return (
         <footer className="bg-footerBg pt-8 pb-4">
         <div className="px-3 md:px-16 pb-6 flex gap-10 md:gap-20 ml-0 md:ml-10 items-center flex-col md:flex-row">
-          <Image width={350} height={350} src={"/logo2.svg"} alt="WiseFleet" />
+          <Image width={320} height={320} src={"/logo2.svg"} alt="WiseFleet" />
           <div className="flex gap-16">
-            <ul className="flex flex-col gap-3 pt-10">
+            <ul className="flex flex-col gap-3 pt-10 px-4">
               <li className="font-bold text-gray-500 mb-4 text-2xl">Links</li>
               <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
                 <Link href={"/#plans"}>
@@ -35,7 +35,7 @@ export default function Footer () {
               </li>
             </ul>
 
-            <ul className="flex flex-col gap-3 pt-10">
+            <ul className="flex flex-col gap-3 pt-10 px-4">
               <li className="font-bold text-gray-500 mb-4 text-2xl">
                 Contáctanos
               </li>

@@ -21,10 +21,10 @@ export default function CardContent({ cards }: Props) {
     );
   };
   return (
-    <div className="flex flex-col md:flex-row gap-4 px-3 md:px-24  items-center relative">
+    <div className="flex flex-col md:flex-row gap-0 md:gap-4 px-3 md:px-24 items-center relative">
       {cards.map((card, index) => {
         return (
-          <div key={index}>
+          <article key={index}>
             <CardInfo card={card}/>
             <div
               className={`relative md:hidden flex flex-col items-center ${
@@ -43,7 +43,7 @@ export default function CardContent({ cards }: Props) {
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         );
       })}
       <button

@@ -11,7 +11,7 @@ export default function Carousel() {
       id: 0,
       title: "Monitorea tus vehículos",
       content: "Con un plan que se adapta",
-      content2: "al tamaño de su flota",
+      content2: "al tamaño de tu flota",
       img: "banner/banner1.jpg",
       mobile_img: "banner/banner1-mobile.jpg",
     },
@@ -26,7 +26,7 @@ export default function Carousel() {
       id: 2,
       title: "App para la gestión y control de tu flota",
       content: "Cumple con los estándares de reportería logística que solicitan los mandantes",
-      img: "banner/banner3.png",
+      img: "banner/banner3.jpg",
       mobile_img: "banner/banner3-mobile.png",
     },
     {
@@ -76,11 +76,11 @@ export default function Carousel() {
                 alt={`Mobile Image`}
               />
               <div className="absolute bottom-20 md:bottom-40 w-full flex flex-col items-center justify-center gap-6">
-                <h1 className="w-1/2 md:w-full text-5xl md:text-8xl font-extrabold roboto text-center">
+                <h1 className="w-1/2 md:w-full text-5xl md:text-8xl font-extrabold roboto text-center text-shadow">
                   {slide.title}
                 </h1>
 
-                <p className="w-1/2 md:w-full text-2xl md:text-5xl font-light text-center min-h-subtitle">
+                <p className="w-1/2 md:w-full text-2xl md:text-5xl font-light text-center min-h-subtitle text-shadow">
                   {slide.content}
                   <strong className="font-bold"> {slide.content2 ?? ""}</strong>
                 </p>

@@ -36,8 +36,8 @@ export default function Contact() {
   }
 
   return (
-    <Fade cascade damping={0.1}>
-      <div className="flex flex-col bg-white items-center xl:flex-row gap-10 min-h-custom2 px-3 py-20 md:py-3 md:px-24  md:mb-1">
+    <div className="flex flex-col bg-white items-center xl:flex-row gap-10 min-h-custom2 px-3 py-20 md:py-3 md:px-24  md:mb-1">
+        <Fade cascade damping={0.1}>
         <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -51,6 +51,8 @@ export default function Contact() {
             src={"/camion.png"}
           />
         </motion.div>
+        </Fade>
+        <Fade cascade damping={0.1}>
         <motion.aside 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -100,7 +102,7 @@ export default function Contact() {
             </div>
           </form>
         </motion.aside>
+        </Fade>
       </div>
-    </Fade>
   );
 }

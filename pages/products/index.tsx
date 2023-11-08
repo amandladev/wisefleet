@@ -39,7 +39,7 @@ export default function Products() {
 
       <Navbar openNavbar={toggleNavbar} isOpen={isOpen} mainPage={false} />
 
-      <main className="relative">
+      <main className="relative bg-white">
         {products.length > 0 &&
           products.map((product, index) => {
             return (

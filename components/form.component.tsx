@@ -85,7 +85,7 @@ export default function Form({ openPayment, product }: Props) {
     <Fade cascade damping={0.1}>
       <main className="flex relative flex-col-reverse md:flex-row">
         <form
-          className="text-black py-6 px-8 md:px-20 xl:px-40 md:w-1/2 w-full border-r border-t border-gray-200"
+          className="text-black bg-white py-6 px-8 md:px-20 xl:px-40 md:w-1/2 w-full border-r border-t border-gray-200"
           id="payment-form"
         >
           <div className="flex flex-col gap-3 my-3">

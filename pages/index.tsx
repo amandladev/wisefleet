@@ -19,7 +19,7 @@ import Footer from "@/components/footer.component";
 import { fetchData } from "@/utils/fetch.util";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [questions, setQuestions] = useState<QuestionType[]>([]);
   const [contentCards, setContentCards] = useState<CardType[]>([]);
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -47,12 +47,12 @@ export default function Home() {
           <Carousel />
         </section>
 
-        <section className="flex flex-col md:flex-row gap-3 min-h-screen pt-3 mb-12 md:mb-0 px-3 md:px-24 custom-background">
+        <section className="flex flex-col md:flex-row gap-3 custom-max-h h-screen pt-3 mb-12 md:mb-0 px-3 md:px-24 custom-background">
           <Fade cascade damping={0.1}>
             <div className="flex-1 order-2 md:order-1 md:px-3 px-8">
               <Image
-                width={1000}
-                height={800}
+                width={900}
+                height={680}
                 src={"/img-descubre.png"}
                 alt="wisefleet"
               />
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="min-h-screen image-background pt-10 relative"
+          className="h-screen custom-max-h image-background pt-10 relative"
           id="plans"
         >
           <Fade cascade damping={0.1}>
@@ -234,11 +234,11 @@ export default function Home() {
         </section>
 
         <section
-          className="min-h-screen bg-white py-8 px-3 md:px-24 mt-4 md:mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
+          className="h-screen custom-max-h  bg-white py-8 px-3 md:px-24 mt-4 md:mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
           id="download"
         >
           <Fade>
-            <div className="flex flex-col gap-4  justify-self-end md:-mt-20">
+            <div className="flex flex-col gap-4 justify-self-end md:-mt-20">
               <h1 className="text-center md:text-left text-mainColor text-5xl md:text-7xl font-bold">
                 Descarga la APP
               </h1>
@@ -285,7 +285,7 @@ export default function Home() {
             </div>
           </Fade>
           <Fade>
-            <div className="md:-ml-40">
+            <div className="md:-ml-24">
               <Image
                 src={"/app-3.png"}
                 width={900}
