@@ -15,7 +15,7 @@ import { EnviameModel } from "@/services/enviame.service";
 
 export default function Checkout() {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [product, setProduct] = useState({});
   const [deviceId, setDeviceId] = useState(null);
   const [client, setClient] = useState({})

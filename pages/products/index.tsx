@@ -14,7 +14,7 @@ export default function Products() {
   const router = useRouter();
   const [products, setProducts] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggleNavbar = () => {
     setIsOpen((current) => !current);
   };

@@ -95,11 +95,17 @@ body {
 .min-h-custom {
   height: 86vh;
   max-height: 1200px;
-  min-height: 920px;
+  min-height: 550px;
 }
 
+@media (max-width: 450px) { 
+  .min-h-custom {
+    height: 100%;
+  }
+}
+
+/* height: 90vh; */
 .min-h-custom2 {
-  height: 90vh;
   max-height: 1080px;
 }
 

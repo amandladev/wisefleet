@@ -46,7 +46,7 @@ export default function Footer () {
           </div>
         </div>
 
-        <div className="bg-footerSecond w-full flex gap-2 md:gap-0 md:flex-row flex-col-reverse justify-between text-md py-4 md:py-2 px-6 md:px-60 mt-3 items-center">
+        <div className="bg-footerSecond w-full flex gap-2 md:gap-0 md:flex-row flex-col-reverse justify-between text-md py-2 px-6 md:px-60 mt-3 items-center">
           <a className="text-sm cursor-pointer hover:text-gray-300">Copyright</a>
 
           <div className="flex gap-10 items-center">

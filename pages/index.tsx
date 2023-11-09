@@ -98,15 +98,15 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="h-screen custom-max-h image-background pt-10 relative"
+          className="md:h-screen custom-max-h image-background pt-7 md:pt-10 relative"
           id="plans"
         >
           <Fade cascade damping={0.1}>
-            <div className="text-center my-12">
-              <h1 className="text-6xl md:text-7xl roboto font-bold">
+            <div className="text-center my-3 md:my-12">
+              <h1 className="text-4xl md:text-7xl roboto font-bold">
                 Elige el plan
               </h1>
-              <h4 className="text-3xl md:text-4xl roboto font-bold mt-3">
+              <h4 className="text-2xl md:text-4xl roboto font-bold mt-3">
                 que se acomode mejor a tu negocio
               </h4>
             </div>
@@ -116,7 +116,7 @@ export default function Home() {
           </Fade>
         </section>
         <section
-          className="min-h-custom2 bg-white pt-20 relative"
+          className="min-h-custom2 bg-white pt-7 md:pt-20 relative"
           id="benefits"
         >
           <Fade cascade damping={0.1}>
@@ -125,7 +125,7 @@ export default function Home() {
                 <h1 className="font-bold roboto text-4xl 2xl:text-6xl text-center translate-x-0 md:-translate-x-6 md:text-left text-mainColor">
                   Una flota más segura
                 </h1>
-                <h2 className="roboto text-2xl 2xl:text-5xl text-black text-center translate-x-0 md:translate-x-6 md:text-right mt-0 md:mt-3 font-light">
+                <h2 className="roboto text-xl 2xl:text-5xl text-black text-center translate-x-0 md:translate-x-6 md:text-right mt-0 md:mt-3 font-light">
                   Beneficios para transportistas
                 </h2>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
         </section>
 
         <section
-          className="h-screen custom-max-h  bg-white py-8 px-3 md:px-24 mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
+          className="md:h-screen custom-max-h  bg-white py-8 px-3 md:px-24 mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
           id="download"
         >
           <Fade>

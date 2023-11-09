@@ -58,7 +58,7 @@ export default function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         exit={{ opacity: 0, scale: 0.5 }}
-        className="px-8 flex-1">
+        className="px-1 md:px-8 flex-1">
           <article className="">
             <h4 className="text-mainColor font-extrabold text-3xl md:text-4xl">Descubre más sobre Wisefleet</h4>
             <div className="flex items-center gap-3 mt-6 mb-10">
