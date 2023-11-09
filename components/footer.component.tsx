@@ -5,7 +5,7 @@ export default function Footer () {
         <footer className="bg-footerBg pt-8 pb-4">
         <div className="px-3 md:px-16 pb-6 flex gap-10 md:gap-20 ml-0 md:ml-10 items-center flex-col md:flex-row">
           <Image width={320} height={320} src={"/logo2.svg"} alt="WiseFleet" />
-          <div className="flex gap-16">
+          <div className="flex md:gap-16">
             <ul className="flex flex-col gap-3 pt-10 px-4">
               <li className="font-bold text-gray-500 mb-4 text-2xl">Links</li>
               <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
@@ -39,9 +39,9 @@ export default function Footer () {
               <li className="font-bold text-gray-500 mb-4 text-2xl">
                 Contáctanos
               </li>
-              <li className="text-gray-500 text-md md:text-2xl">+51 1 6282611</li>
-              <li className="text-gray-500 text-md md:text-2xl">info.peru@wisetrackcorp.com</li>
-              <li className="text-gray-500 text-md md:text-2xl">Calle El Boulevard 182, oficina 603, Surco, Lima</li>
+              <li className="text-gray-500 text-sm md:text-2xl">+51 1 6282611</li>
+              <li className="text-gray-500 text-sm md:text-2xl">info.peru@wisetrackcorp.com</li>
+              <li className="text-gray-500 text-sm md:text-2xl">Calle El Boulevard 182, oficina 603, Surco, Lima</li>
             </ul>
           </div>
         </div>

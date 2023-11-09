@@ -60,7 +60,7 @@ export default function Products({ products }: Props) {
                     })}
                     </div>
 
-                    <div className="w-80">
+                    <div className="md:w-80">
                       <Button  isDefault={true} isProduct={true}/>
                     </div>
                 </article>

@@ -38,7 +38,7 @@ export default function CardContent({ cards }: Props) {
                 </h4>
                 <p className="text-gray-600 h-16">{card.description}</p>
 
-                <p className="uppercase text-right roboto text-mainColor my-3 md:my-10">
+                <p className="uppercase text-right roboto text-mainColor mt-6 mb-0 md:mb-10 md:mt-10">
                   Mas informacion {"->"}
                 </p>
               </div>
