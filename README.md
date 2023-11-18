@@ -25,6 +25,9 @@ E-commerce.
 https://www.tecmint.com/install-pm2-to-run-nodejs-apps-on-linux-server/
 
 This is for centos 7 for example.
+4.1 There are some alternatives to pm2 on Windows enviroments like:
+- forever
+- nssm
 
 5.  Add and .env file in the root directory of the project, you can do it using vim or nano.
 ```bash
@@ -45,7 +48,7 @@ ENVIAME_URL=
 ENVIAME_URL_2=
 ```
 
-6. Build and start the project
+6. Build and start the project (pm2 for Unix enviroments)
 ```bash
 pnpm run build 
 pm2 start pnpm --name "wisefleet-app" -- run start --no-daemon
