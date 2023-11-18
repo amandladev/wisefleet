@@ -23,7 +23,7 @@ E-commerce.
 3. Install PNPM.
 4. Install pm2 (See docs based on your Linux Distribution). 
 https://www.tecmint.com/install-pm2-to-run-nodejs-apps-on-linux-server/ - This is for centos 7 for example.
-4.1 There are some alternatives to pm2 on Windows enviroments like:
+There are some alternatives to pm2 on Windows enviroments like:
 - forever
 - nssm
 
