@@ -84,7 +84,7 @@ export default function Products({ products }: Props) {
                     })}
                     </div>
                     <div onClick={() => openCheckout(product)}>
-                      <Button isDefault={true} isProduct={true} />
+                      <Button isDefault={true}  />
                     </div>
                 </article>
             </div>
