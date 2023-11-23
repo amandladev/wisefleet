@@ -47,7 +47,8 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #3DB9BE;
+  /* background: #3DB9BE; */
+  background: #fff;
   font-family: "Roboto", sans-serif;
 }
 
@@ -61,8 +62,8 @@ body {
 
 .custom-background {
   /* background: linear-gradient(to bottom, white 20%, #3DB9BE 10%); */
-  /* background: linear-gradient(to bottom, #3DB9BE 30%, white 10%); */
-  background: #3DB9BE;
+  background: linear-gradient(to bottom, #3DB9BE 30%, white 10%);
+  /* background: #3DB9BE; */
 }
 
 .image-background {
@@ -101,6 +102,16 @@ body {
 @media (max-width: 450px) { 
   .min-h-custom {
     height: 100%;
+  }
+  .custom-background {
+    background: linear-gradient(to bottom, white 35%, #3DB9BE 30%)!important;
+  }
+ 
+}
+
+@media (max-width: 767px) { 
+  .custom-background {
+    background: linear-gradient(to bottom, white 60%, #3DB9BE 10%);
   }
 }
 

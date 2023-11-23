@@ -33,7 +33,7 @@ export default function Home() {
     fetchData("/json/questions.json", setQuestions);
     fetchData("/json/content-cards.json", setContentCards);
     fetchData("/json/products.json", setProducts);
-    fetchData("/json/carousel.sjon", setSlides);
+    fetchData("/json/carousel.json", setSlides);
   }, []);
 
   return (
@@ -49,20 +49,13 @@ export default function Home() {
         <section className="relative">
           <Carousel slides={slides}/>
         </section>
-
-        <section className="flex flex-col md:flex-row gap-3 custom-max-h h-full md:h-screen pt-3 mb-0 px-3 md:px-24 custom-background">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-3 custom-max-h h-full md:h-screen pt-3 mb-0 px-3 md:px-24 custom-background">
           <Fade cascade damping={0.1}>
-            <div className="flex-1 order-2 md:order-1 md:px-3 px-8">
-              <Image
-                width={850}
-                height={800}
-                src={"/app/img-descubre.png"}
-                alt="wisefleet"
-              />
-            </div>
+            <aside className="col-span-1 order-2 md:order-1 md:px-3 px-8 ms-6">
+              <img src="/app/img-descubre.png" alt="Wisefleet discover image"/>
+            </aside>
           </Fade>
-
-          <div className="order-1 md:order-2 block md:hidden">
+          <header className="order-1 md:order-2 block md:hidden">
             <div className="w-full flex justify-center">
               <Image
                 width={300}
@@ -71,34 +64,34 @@ export default function Home() {
                 alt="wiseflee gat"
               />           
             </div>
-          </div>
-          <div className="order-last flex-1 px-6 md:px-0 pt-0 pb-10 md:pb-0 md:pt-10 mt-0 md:mt-8">
-            <div className="w-full hidden md:flex">
-              <Image
-                width={400}
-                height={100}
-                src={"/img-texto-descubre.png"}
-                alt="wiseflee gat"
-              />
-            </div>
-
-            <p className="text-gray-100 text-xl md:text-2xl max-custom-width mt-0 md:mt-16">
-              Revolucionaria solución sin contrato paras las empresas de
-              transporte que requieren cumplir con la información que les
-              solicitan los mandantes y al mismo tiempo controlar de manera
-              simple sus vehículos.
-            </p>
-            <p className="text-gray-100 text-xl md:text-2xl mt-8 max-custom-width">
-              Consta de un{" "}
-              <strong className="font-bold text-hoverColor">
-                dispositivo autoinstalable, plataforma y una aplicación
-              </strong>{" "}
-              apta para cualquier telefono.
-            </p>
-            <Link href={"/products"}>
-              <Button isDefault={true} />
-            </Link>
-          </div>
+          </header>
+          <article className="order-last col-span-1 px-6 md:px-0 pt-0 pb-10 md:pb-0 md:pt-10 mt-0 md:mt-8 ms-0 md:ms-6">
+              <div className="hidden md:flex">
+                <Image
+                  width={400}
+                  height={100}
+                  src={"/img-texto-descubre.png"}
+                  alt="wiseflee gat"
+                />
+                {/* <img src="/img-texto-descubre.png" alt="Descubre Wisefleet"/> */}
+              </div>
+              <p className="text-gray-800 text-xl xl:text-2xl max-custom-width mt-0 md:mt-16">
+                Revolucionaria solución sin contrato paras las empresas de
+                transporte que requieren cumplir con la información que les
+                solicitan los mandantes y al mismo tiempo controlar de manera
+                simple sus vehículos.
+              </p>
+              <p className="text-gray-800 text-xl md:text-2xl mt-8 max-custom-width">
+                Consta de un{" "}
+                <strong className="font-bold text-hoverColor">
+                  dispositivo autoinstalable, plataforma y una aplicación
+                </strong>{" "}
+                apta para cualquier telefono.
+              </p>
+              <Link href={"/products"}>
+                <Button isDefault={true} />
+              </Link>
+          </article>
         </section>
         <section
           className="md:h-screen custom-max-h image-background pt-7 md:pt-10 relative"
@@ -233,20 +226,20 @@ export default function Home() {
             </Link>
           </Fade>
         </section>
-
+        {/* flex flex-col md:flex-row items-center justify-center  */}
         <section
-          className="md:h-screen custom-max-h  bg-white py-8 px-3 md:px-24 mt-0 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0 relative"
+          className="md:h-screen custom-max-h bg-white py-8 px-3 md:px-24 my-0 grid grid-cols-1 justify-items-center md:grid-cols-2 items-center gap-3 md:gap-0 relative"
           id="download"
         >
           <Fade>
-            <div className="flex flex-col gap-4 justify-self-end md:-mt-20">
-              <h1 className="text-center md:text-left text-mainColor text-5xl md:text-7xl font-bold">
+            <aside className="col-span-1 flex flex-col gap-4 justify-self-end md:-mt-20">
+              <h1 className="text-center md:text-left text-mainColor text-5xl lg:text-7xl font-bold">
                 Descarga la APP
               </h1>
-              <h4 className="text-center md:text-left text-black font-bold text-xl md:text-2xl">
+              <h4 className="text-center md:text-left text-black font-bold text-xl lg:text-2xl">
                 Y comienza a mejorar la gestión de tu flota
               </h4>
-              <p className="px-3 md:px-0 text-gray-600  max-w-md leading-loose">
+              <p className="px-3 md:px-0 text-gray-800  max-w-md leading-loose">
                 La revolucionaria aplicación que te ayudará a visualizar tu
                 flota por patente en tiempo real y estadísticas de
                 comportamiento por móvil, y en conjunto con la plataforma,
@@ -283,16 +276,17 @@ export default function Home() {
                   />
                 </a>
               </div>
-            </div>
+            </aside>
           </Fade>
           <Fade>
-            <div className="md:-ml-24">
-              <Image
+            <div className="md:-ml-0 col-span-1">
+              <img src="/app/app-3.png" alt="Mobile App"/>
+              {/* <Image
                 src={"/app/app-3.png"}
                 width={900}
                 height={800}
                 alt="mobile app"
-              />
+              /> */}
             </div>
           </Fade>
         </section>

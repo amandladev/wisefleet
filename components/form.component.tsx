@@ -402,18 +402,18 @@ export default function Form({ openPayment, product }: Props) {
                   src={`/products/${product.image}`}
                   alt={product.name}
                 />
-                <Image
+                {/* <Image
                   className="rounded absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out"
                   width={800}
                   height={500}
                   src={`/products/description.jpg`}
                   alt={product.name}
-                />
+                /> */}
               </div>
               <div className="flex justify-between items-center mt-12">
                 <div className="flex gap-3">
                   <div className="">
-                    <h4 className="text-mainColor text-3xl font-extrabold ">
+                    <h4 className="text-mainColor text-3xl font-extrabold">
                       {product.name}
                     </h4>
                     <p className="text-gray-500 text-sm">Autoinstalable</p>

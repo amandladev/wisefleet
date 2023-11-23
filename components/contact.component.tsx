@@ -36,7 +36,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative flex flex-col bg-white items-center xl:flex-row gap-10 min-h-custom2 min-h-custom3 px-3 py-20 md:py-3 md:px-24  md:mb-1">
+    <section id="contact" className="relative flex flex-col bg-white items-center xl:flex-row gap-10 min-h-custom2 min-h-custom3 px-3 py-20 md:py-3 md:px-24">
         <Fade cascade damping={0.1}>
         <motion.div 
         initial={{ opacity: 0 }}
