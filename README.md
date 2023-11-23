@@ -20,7 +20,11 @@ E-commerce.
 
 
 2. Install node version 18+ or higher.
-3. Install PNPM.
+3. Install PNPM as package manager and then install dependencies.
+```bash
+  pnpm i
+```
+
 4. Install pm2 (See docs based on your Linux Distribution). 
 https://www.tecmint.com/install-pm2-to-run-nodejs-apps-on-linux-server/ - This is for centos 7 for example.
 There are some alternatives to pm2 on Windows enviroments like:
@@ -54,3 +58,4 @@ pm2 start pnpm --name "wisefleet-app" -- run start --no-daemon
 
 ```
 
+Now you will have the project running in port 3000. 
