@@ -10,11 +10,12 @@ E-commerce.
 
 
 ## Installation
+#### You will need a MYSQL Data base
 
 1. Clone Wisefleet project
 
 ```bash
-  git clone https://github.com/sreyescurotto/wisefleet.git
+  git clone https://github.com/amandladev/wisefleet.git
   cd wisefleet
 ```
 
