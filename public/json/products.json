@@ -5,12 +5,12 @@
         "type": "PLAN",
         "features" : [
             "Dispositivo GPS",
-            "Aplicacion movil",
+            "Aplicacion móvil",
             "Plataforma",
-            "Seguimiento moviles",
+            "Seguimiento móviles",
             "Recorridos",
             "Comportamiento de conduccion",
-            "Replicas (1 mandante a elegir)"
+            "Réplicas (1 mandante a elegir)"
         ],
         "options": [],
         "image": "product1.png",
@@ -23,12 +23,12 @@
         "type": "PLAN",
         "features" : [
             "Dispositivo GPS",
-            "Aplicacion movil",
+            "Aplicacion móvil",
             "Plataforma",
-            "Seguimiento moviles",
+            "Seguimiento móviles",
             "Recorridos",
             "Comportamiento de conduccion",
-            "Replicas (1 mandante a elegir)"
+            "Réplicas (1 mandante a elegir)"
         ],
         "options": [],
         "image": "product2.png",

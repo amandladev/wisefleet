@@ -11,18 +11,20 @@ import Question from "@/components/question.component";
 import CardContent from "@/components/cardContent.component";
 import Products from "@/components/product.component";
 import Button from "@/components/button.component";
+import Footer from "@/components/footer.component";
 
 import { QuestionType } from "@/types/question.type";
 import { CardType } from "@/types/card.type";
 import { ProductType } from "@/types/product.type";
-import Footer from "@/components/footer.component";
 import { fetchData } from "@/utils/fetch.util";
+import { SlidesType } from "@/utils/slide.util";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(true);
   const [questions, setQuestions] = useState<QuestionType[]>([]);
   const [contentCards, setContentCards] = useState<CardType[]>([]);
   const [products, setProducts] = useState<ProductType[]>([]);
+  const [slides, setSlides] = useState<SlidesType>([]);
   const toggleNavbar = () => {
     setIsOpen((current) => !current);
   };
@@ -31,6 +33,7 @@ export default function Home() {
     fetchData("/json/questions.json", setQuestions);
     fetchData("/json/content-cards.json", setContentCards);
     fetchData("/json/products.json", setProducts);
+    fetchData("/json/carousel.sjon", setSlides);
   }, []);
 
   return (
@@ -44,7 +47,7 @@ export default function Home() {
 
       <main className="relative" id="start">
         <section className="relative">
-          <Carousel />
+          <Carousel slides={slides}/>
         </section>
 
         <section className="flex flex-col md:flex-row gap-3 custom-max-h h-full md:h-screen pt-3 mb-0 px-3 md:px-24 custom-background">

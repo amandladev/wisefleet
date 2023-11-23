@@ -1,0 +1,31 @@
+[
+    {
+      "id": 0,
+      "title": "Monitorea tus vehículos",
+      "content": "Con un plan que se adapta",
+      "content2": "al tamaño de tu flota",
+      "img": "banner/banner1.jpg",
+      "mobile_img": "banner/banner1-mobile.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Tu Flota segura 24x7",
+      "content": "El tamaño de tu flota no importa",
+      "img": "banner/banner2.png",
+      "mobile_img": "banner/banner2-mobile.png"
+    },
+    {
+      "id": 2,
+      "title": "App para la gestión",
+      "content": "¡Instalación rápida!",
+      "img": "banner/banner3.jpg",
+      "mobile_img": "banner/banner3-mobile.png"
+    },
+    {
+      "id": 3,
+      "title": "Monitoreo en tiempo real",
+      "content": "Mantén tu floja segura y libre de contratos",
+      "img": "banner/banner4.png",
+      "mobile_img": "banner/banner4-mobile.png"
+    }
+]

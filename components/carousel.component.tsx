@@ -1,42 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import CarouselButton from "./carouselButton.component";
 import Button from "./button.component";
-import Link from "next/link";
+import { SlidesType } from "@/utils/slide.util";
 
-export default function Carousel() {
+interface Props {
+  slides: SlidesType
+}
+export default function Carousel({ slides }: Props) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    {
-      id: 0,
-      title: "Monitorea tus vehículos",
-      content: "Con un plan que se adapta",
-      content2: "al tamaño de tu flota",
-      img: "banner/banner1.jpg",
-      mobile_img: "banner/banner1-mobile.jpg",
-    },
-    {
-      id: 1,
-      title: "Tu Flota segura 24x7",
-      content: "El tamaño de tu flota no importa",
-      img: "banner/banner2.png",
-      mobile_img: "banner/banner2-mobile.png",
-    },
-    {
-      id: 2,
-      title: "App para la gestión y control de tu flota",
-      content: "Cumple con los estándares de reportería logística que solicitan los mandantes",
-      img: "banner/banner3.jpg",
-      mobile_img: "banner/banner3-mobile.png",
-    },
-    {
-      id: 3,
-      title: "Monitorea tus vehículos",
-      content: "",
-      img: "banner/banner4.png",
-      mobile_img: "banner/banner4-mobile.png",
-    },
-  ];
+
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) =>

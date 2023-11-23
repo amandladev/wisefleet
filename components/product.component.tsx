@@ -1,10 +1,9 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { ProductType } from "@/types/product.type";
 import CarouselButton from "./carouselButton.component";
 import Button from "./button.component";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
 interface Props {
   products: ProductType[];
