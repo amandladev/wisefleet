@@ -46,7 +46,8 @@ ENVIAME_URL=
 ENVIAME_URL_2=
 ```
 
-6. Build and start the project (pm2 for Unix enviroments)
+6. Build and start the project (pm2 for Unix enviroments).
+   Check the equivalent for Windows Enviroments
 ```bash
 pnpm run build 
 pm2 start pnpm --name "wisefleet-app" -- run start --no-daemon
