@@ -30,15 +30,15 @@ export default function CardInfo({ card }: Props) {
           hover ? "over-height slide-translate-y-active" : ""
         }`}
       >
-        <h4 className="font-extrabold text-mainColor text-2xl h-16">
+        <h4 className="font-extrabold text-mainColor text-lg 2xl:text-2xl h-16">
           {card.title}
         </h4>
-        <p className={`text-gray-600  ${hover ? "h-20" : "slide-opacity "}`}>
+        <p className={`text-gray-600 text-xs 2xl:text-base ${hover ? "h-20" : "slide-opacity "}`}>
           {card.description}
         </p>
 
         <p
-          className={`uppercase text-right roboto text-mainColor mt-10 ${
+          className={`uppercase text-right roboto text-mainColor text-sm 2xl:text-base mt-3 2xl:mt-10 ${
             hover ? "" : "slide-opacity "
           }`}
         >

@@ -32,12 +32,12 @@ export default function Products({ products }: Props) {
   };
 
   return (
-    <div className="px-6 relative z-10 py-10 xl:py-3 block md:flex justify-center gap-6">
+    <div className="px-6 relative z-10 py-8 2xl:py-3 block lg:flex justify-center gap-6">
       {products.map((product, index) => {
         return (
             <div key={index}>
                 <article
-                    className={`md:hidden rounded-lg bg-mainColor flex flex-col items-center py-12 gap-4 relative ${
+                    className={`lg:hidden rounded-lg bg-mainColor flex flex-col items-center py-12 gap-4 relative ${
                     product.id === current ? "" : "hidden"
                     }`}
                 >
@@ -64,12 +64,12 @@ export default function Products({ products }: Props) {
                     </div>
                 </article>
 
-                <article className={`md:flex flex-col items-center rounded-lg hidden bg-mainColor p-12`}>
+                <article className={`lg:flex flex-col items-center rounded-lg hidden bg-mainColor p-8 2xl:p-12`}>
                     <header className="text-center">
-                        <span className="font-light text-xl">
+                        <span className="font-light text-sm 2xl:text-xl">
                             {product.type} 
                         </span>
-                        <h2 className="text-4xl">{product.title}</h2>
+                        <h2 className="text-2xl 2xl:text-4xl">{product.title}</h2>
                         <small className="text-sm h-6">{product.description ?? ""}</small>
                     </header>
                     <div>
@@ -77,14 +77,14 @@ export default function Products({ products }: Props) {
                         return (
                         <div key={index2} className="flex gap-3 items-center">
                             <div className="w-3 h-3 bg-white rounded-full"> </div>
-                            <p>{feature}</p>
+                            <p className="text-sm 2xl:text-base">{feature}</p>
                         </div>
                         );
                     })}
                     </div>
-                    <div onClick={() => openCheckout(product)}>
+                    <footer onClick={() => openCheckout(product)}>
                       <Button isDefault={true}  />
-                    </div>
+                    </footer>
                 </article>
             </div>
         );

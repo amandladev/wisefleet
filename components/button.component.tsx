@@ -8,7 +8,7 @@ export default function Button({ isDefault, isProduct = false }: Props)  {
     const normal = 'hover:bg-hoverColor bg-mainColor mt-8'
     const productButton = 'hover:bg-white hover:text-black bg-mainColor mt-8'
     return (
-        <button className={`${isDefault && isProduct ? productButton : isDefault ? normal : transparent} hover:border-transparent uppercase border-white transition w-full border-2 text-lg rounded-xl md:w-80 flex items-center justify-center gap-3 px-8 py-2`}>
+        <button className={`${isDefault && isProduct ? productButton : isDefault ? normal : transparent} hover:border-transparent uppercase border-white transition w-full border-2 text-sm 2xl:text-lg rounded-xl md:w-80 flex items-center justify-center gap-3 px-4 2xl:px-8 py-2`}>
             <span className="spacing-l">obtén aquí</span>
         </button>)
 }

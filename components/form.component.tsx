@@ -85,7 +85,7 @@ export default function Form({ openPayment, product }: Props) {
     <Fade cascade damping={0.1}>
       <main className="flex relative flex-col-reverse md:flex-row">
         <form
-          className="text-black bg-white py-6 px-8 md:px-20 xl:px-40 md:w-1/2 w-full border-r border-t border-gray-200"
+          className="text-black bg-white py-6 px-8 md:px-20 2xl:px-40 md:w-1/2 w-full border-r border-t border-gray-200"
           id="payment-form"
         >
           <div className="flex flex-col gap-3 my-3">
@@ -385,14 +385,14 @@ export default function Form({ openPayment, product }: Props) {
             </div>
           </div>
         </form>
-        <aside className="md:w-1/2 w-full xl:px-8 px-0 bg-bgCheckout border-t border-gray-200">
+        <aside className="md:w-1/2 w-full 2xl:px-8 px-0 bg-bgCheckout border-t border-gray-200">
           {product.image && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, scale: 0.9 }}
               transition={{ duration: 0.5 }}
               exit={{ opacity: 0, scale: 0.5 }}
-              className="flex justify-center flex-col gap-8 py-3 xl:py-6 xl:px-20  my-0 xl:my-3 "
+              className="flex justify-center flex-col gap-8 py-3 2xl:py-6 2xl:px-20  my-0 2xl:my-3 "
             >
               <div className="relative">
                 <Image

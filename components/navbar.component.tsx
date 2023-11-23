@@ -15,12 +15,13 @@ export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
       animate={{ opacity: 1, translateY: 0 }}
       transition={{ duration: 0.5 }}
       exit={{ opacity: 0, scale: 0.5 }}
-      className="bg-mainColor flex flex-row justify-between items-center px-4 py-4 md:px-24 relative z-20">
+      className="bg-mainColor flex flex-row justify-between items-center px-4 py-2 lg:py-4 lg:px-16 2xl:px-24 relative z-20">
         <Link href="/#start">
-          <Image width={93} height={40} src={"/logo.svg"} alt="Wisefleet logo" />
+          <Image width={93} height={40} src={"/logo.svg"} alt="Wisefleet logo" className="hidden lg:block"/>
+          <Image width={60} height={33} src={"/logo.svg"} alt="Wisefleet logo" className="block lg:hidden"/>
         </Link>
-        <div className="items-center gap-10 hidden md:flex">
-          <ul className="flex gap-4 mr-10">
+        <div className="items-center gap-10 hidden lg:flex">
+          <ul className="flex gap-4 mr-0 2xl:mr-16">
             <li className="cursor-pointer uppercase hover:text-hoverColor transition-hov">
               <Link href="/#plans">
                 Planes
@@ -59,14 +60,14 @@ export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
         </div>
         <div
           onClick={openNavbar}
-          className="p-3 border-4 border-white border-solid rounded-full h-12 w-12 
-        md:hidden flex items-center justify-center"
+          className="p-3 border-4 border-white border-solid rounded-full h-8 md:h-3 md:w-3 w-8  
+        lg:hidden flex items-center justify-center"
         >
           <span className="inline-block align-middle border-4 border-solid border-transparent p-3 border-effect rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               strokeWidth="2"
               stroke="currentColor"
@@ -82,8 +83,8 @@ export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
           </span>
         </div>
       </motion.nav>
-      <div
-        className={`absolute w-full z-10 bg-mainColor py-6 md:hidden block ${
+      <nav
+        className={`absolute w-full z-10 bg-mainColor py-6 lg:hidden block ${
           isOpen ? "slide-top-back " : "nav-responsive-bottom slide-top"
         }`}
       >
@@ -114,13 +115,13 @@ export default function Navbar({ openNavbar, isOpen, mainPage = true }: Props) {
             </Link>
           </li>
           <Link href="/product">
-            <button className="uppercase hover:bg-black transition bg-l-purple w-full md:w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
+            <button className="uppercase hover:bg-black transition bg-l-purple w-full lg:w-4/5 text-sm rounded flex items-center justify-center gap-3 px-8 py-2">
               <span className="spacing-l">obtén aquí</span>
               <Image width={13} height={13} alt="prev slide" src={"/arrow.svg"} />
             </button>
           </Link>
         </ul>
-      </div>
+      </nav>
       <style jsx>{`
         @-webkit-keyframes slide-top {
           0% {

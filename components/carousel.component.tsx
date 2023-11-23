@@ -50,11 +50,11 @@ export default function Carousel({ slides }: Props) {
                 alt={`Mobile Image`}
               />
               <div className="absolute bottom-20 md:bottom-40 w-full flex flex-col items-center justify-center gap-6">
-                <h1 className="w-4/5 md:w-full text-5xl md:text-8xl font-extrabold roboto text-center text-shadow">
+                <h1 className="w-4/5 md:w-full text-5xl lg:text-7xl 2xl:text-8xl font-extrabold roboto text-center text-shadow">
                   {slide.title}
                 </h1>
 
-                <p className="w-2/3 md:w-full text-2xl md:text-5xl font-light text-center min-h-subtitle text-shadow">
+                <p className="w-2/3 md:w-full text-2xl lg:text-4xl 2xl:text-5xl font-light text-center min-h-subtitle text-shadow">
                   {slide.content}
                   <strong className="font-bold"> {slide.content2 ?? ""}</strong>
                 </p>

@@ -8,27 +8,27 @@ export default function Footer () {
           <div className="flex md:gap-16">
             <ul className="flex flex-col gap-3 pt-10 px-4">
               <li className="font-bold text-gray-500 mb-4 text-2xl">Links</li>
-              <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
+              <li className="text-gray-500 text-md hover:text-gray-800 2xl:text-2xl">
                 <Link href={"/#plans"}>
                   Planes
                 </Link>
               </li>
-              <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
+              <li className="text-gray-500 text-md hover:text-gray-800 2xl:text-2xl">
                 <Link href={"/#plans"}>
                   Beneficios  
                   </Link>
               </li>
-              <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
+              <li className="text-gray-500 text-md hover:text-gray-800 2xl:text-2xl">
                 <Link href={"/#contact"}>
                   Contacto
                 </Link>
               </li>
-              <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
+              <li className="text-gray-500 text-md hover:text-gray-800 2xl:text-2xl">
                 <Link href={"/#download"}>
                   Descarga
                 </Link>
               </li>
-              <li className="text-gray-500 text-md hover:text-gray-800 md:text-2xl">
+              <li className="text-gray-500 text-md hover:text-gray-800 2xl:text-2xl">
                 <Link href={"/#qna"}>
                   Q&A
                 </Link>
@@ -39,9 +39,9 @@ export default function Footer () {
               <li className="font-bold text-gray-500 mb-4 text-2xl">
                 Contáctanos
               </li>
-              <li className="text-gray-500 text-sm md:text-2xl">+51 1 6282611</li>
-              <li className="text-gray-500 text-sm md:text-2xl">info.peru@wisetrackcorp.com</li>
-              <li className="text-gray-500 text-sm md:text-2xl">Calle El Boulevard 182, oficina 603, Surco, Lima</li>
+              <li className="text-gray-500 text-sm 2xl:text-2xl">+51 1 6282611</li>
+              <li className="text-gray-500 text-sm 2xl:text-2xl">info.peru@wisetrackcorp.com</li>
+              <li className="text-gray-500 text-sm 2xl:text-2xl">Calle El Boulevard 182, oficina 603, Surco, Lima</li>
             </ul>
           </div>
         </div>
