@@ -55,7 +55,11 @@ ENVIAME_URL_2=
 ```bash
 pnpm run build 
 pm2 start pnpm --name "wisefleet-app" -- run start --no-daemon
-
 ```
 
 Now you will have the project running in port 3000. 
+If you want to run the project in a different port you should use the next bash code:
+```bash
+pnpm run build 
+pm2 start pnpm --name "wisefleet-app" -- run start -p {custom port} --no-daemon
+```
