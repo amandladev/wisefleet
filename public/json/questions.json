@@ -1,18 +1,90 @@
-[    
+[
     {
-        "question" : "¿En qué consiste el producto WISEFLEET?",
-        "answer" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, permite el ingreso a los mandantes con los cuales desea trabajar el transportista."
+        "question": "¿En qué consiste el producto WISEFLEET?",
+        "answer": "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, permite el ingreso a los mandantes con los cuales desea trabajar el transportista."
     },
     {
-        "question" : "¿En qué consiste LOREM ?",
-        "answer" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, permite el ingreso a los mandantes con los cuales desea trabajar el transportista."
+        "question": "¿Cuál es la garantía del producto GPS WISEFLEET?",
+        "answer": "El equipo tiene una garantía de 3 meses. Si el cliente lo quiere reponer, debe pagar por un nuevo equipo, más los costos de delivery."
     },
     {
-        "question" : "¿1 En qué consiste el producto WISEFLEET?",
-        "answer" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, permite el ingreso a los mandantes con los cuales desea trabajar el transportista."
+        "question": "¿En qué consiste la transmisión de datos?",
+        "answer": "La transmisión de datos consiste en el envío de información que captura el GPS hacia la base de datos. Este envío de información se realiza a través de las redes móviles de alguna de las compañías de telefonía (Claro, Entel, Movistar, WOM)."
     },
     {
-        "question" : "¿2 En qué consiste el producto WISEFLEET?",
-        "answer" : "Es una aplicación diseñada para monitorear tu flota, pudiendo revisar velocidades, posiciones, recorridos y muchas cosas más. Además, permite el ingreso a los mandantes con los cuales desea trabajar el transportista."
+        "question": "¿El aparato cuenta con batería propia y cuánto dura?",
+        "answer": "El equipo GPS se encuentra conectado a la batería del vehículo, pero también tiene una batería propia que le entrega una autonomía de 3 horas."
+    },
+    {
+        "question": "¿Pierdo la garantía del vehículo al instalar el GPS?",
+        "answer": "Los dispositivos Wisefleet no provocan la perdida de garantía de los vehículos, ya que van conectados a los bornes de la batería."
+    },
+    {
+        "question": "¿Cobertura solo a nivel nacional?",
+        "answer": "Si bien los GPS señalizan en cualquier parte del mundo, el sacar la data del dispositivo GPS hacia la base de Wisefleet se realiza a través de redes móviles, esto se hace sólo a nivel nacional (Perú)."
+    },
+    {
+        "question": "¿Cuánto tiempo dura este contrato?",
+        "answer": "Es un producto sin contrato y donde el transportista paga por lo que usa. Se aplica una suscripción a la tarjeta, pero se puede dar de baja cuando el cliente lo estime conveniente. El monto siempre es prepagado, no devengado."
+    },
+    {
+        "question": "¿Tengo que devolver el GPS?",
+        "answer": "El GPS es del cliente, ya que fue comprado al momento del pago."
+    },
+    {
+        "question": "¿Cómo lo instalo?",
+        "answer": "La instalación es muy sencilla y se realiza a los bornes de la batería. Sólo debes tener una llave combinada con la medida especifica y revisar el manual que viene en el kit. Además, en la caja del producto existe un código QR donde está el video de instalación."
+    },
+    {
+        "question": "¿Cuánto tiempo se demora la instalación?",
+        "answer": "La instalación básica se demora aproximadamente 30 a 45 minutos, dependiendo de cuan experto es el transportista."
+    },
+    {
+        "question": "¿Puedo usar otro dispositivo GPS?",
+        "answer": "No, sólo puede usar los dispositivos y servicios que Wisefleet tiene homologados."
+    },
+    {
+        "question": "¿Sirve para todos los vehículos?",
+        "answer": "Si, el dispositivo GPS y su aplicación sirve para todos los vehículos."
+    },
+    {
+        "question": "¿Cuántos dispositivos puedo tener en la app?",
+        "answer": "La Apps puede tener ingresados diferentes vehículos por usuario (RUT). Como es una aplicación a cliente final, asumimos que un Transportista Mediano no tienen más de 10 unidades de flota. El transportista, también posee una aplicación Web donde usa el mismo usuario y clave de la aplicación, donde puede realizar mejores auditorias de sus unidades."
+    },
+    {
+        "question": "¿Puedo conectarme con mi usuario en la pc?",
+        "answer": "La aplicación también funciona desde el PC con usuario (RUT) y Clave."
+    },
+    {
+        "question": "¿Aun no me llega la patente, puedo activar el Kit?",
+        "answer": "Si, debe agregar cualquier nombre en el campo \"patente\" y una vez le llegue la patente, puede ir a la opción del menú EDITAR PERFIL y cambiar el campo \"Patente\"."
+    },
+    {
+        "question": "¿Opera en regiones?",
+        "answer": "El servicio opera en todo el territorio nacional."
+    },
+    {
+        "question": "No puedo ingresar a mi cuenta, ¿qué hago?",
+        "answer": "1. Has introducido tu usuario de manera incorrecta; recuerda que tu correo o número móvil son tu usuario y es el mismo que ingresaste al momento de suscribirte. 2. Has introducido tu contraseña incorrectamente; recuerda que tu contraseña es la que ingresaste al momento de suscribirte. Para obtener una nueva contraseña, debes dar click en el enlace He olvidado mi contraseña. En breve recibirás un correo electrónico con un enlace que te permitirá crear una nueva contraseña."
+    },
+    {
+        "question": "¿Cuáles son las opciones de pago?",
+        "answer": "El pago del servicio ya sea por suscripción o kit, sólo tiene como medio de pago tarjetas de crédito o tarjeta de débito."
+    },
+    {
+        "question": "¿Qué hago si se rechaza el pago con mi tarjeta?",
+        "answer": "Esto suele estar relacionado con los sistemas de tu banco, algún error de datos o que no posee cupo disponible. Si le sucede, por favor asegúrese de que los datos de su tarjeta son correctos y que posee saldo disponible e intente registrarse nuevamente. Si aun así la transacción no funciona, necesitará llamar a su banco para autorizar la operación."
+    },
+    {
+        "question": "¿Si no tengo tarjetas bancarias, puedo solicitar el servicio?",
+        "answer": "No, sólo aceptamos la opción de pago con tarjetas bancarias."
+    },
+    {
+        "question": "¿Qué pasa si me roban el vehículo? ¿Ustedes responden?",
+        "answer": "No, Wisefleet es una ayuda para que usted pueda gestionar su flota. Recuerde que las denuncias las debe hacer el propietario del vehículo de manera presencial."
+    },
+    {
+        "question": "¿Cómo anulo o suspendo el servicio?",
+        "answer": "El servicio lo puede anular en el momento que el transportista lo estime conveniente. El Cliente paga por lo que usa."
     }
 ]

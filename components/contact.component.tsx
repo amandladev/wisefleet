@@ -88,7 +88,7 @@ export default function Contact() {
               </div>
               <div className="flex-1"> 
                   <label className="ms-3 uppercase text-black text-sm font-extrabold">Teléfono</label>
-                  <input onChange={(e) => handleStringInput(setPhone, e)} className="mt-1 p-3 text-mainColor focus:outline-none bg-gray-100 placeholder:text-mainColor w-full text-sm 2xl:text-base" type="tel" placeholder="51 93530121"/>
+                  <input onChange={(e) => handleStringInput(setPhone, e)} className="mt-1 p-3 text-mainColor focus:outline-none bg-gray-100 placeholder:text-mainColor w-full text-sm 2xl:text-base" type="tel" placeholder="51 912345678"/>
               </div>
             </div>
             <div className="mt-3">
